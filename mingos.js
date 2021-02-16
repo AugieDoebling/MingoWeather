@@ -1,7 +1,7 @@
 var mingos = [];
 var canvas;
 
-var maxMingos = 15;
+var maxMingos = 30;
 
 
 function setup() {
@@ -39,7 +39,8 @@ function spawnMingo(y=null) {
 }
 
 class Flamingo{
-  constructor(x, y, right) {
+  constructor(x, y) {
+    this.light = Math.random() < 0.2;
     this.x = x
     this.y = y
     this.movingRight = true;
@@ -90,7 +91,7 @@ class Flamingo{
   draw(ctx) {
     ctx.beginPath();
     ctx.ellipse(this.x, this.y, 35, 25, Math.PI, 0, 2 * Math.PI);
-    ctx.fillStyle = '#F06292';
+    ctx.fillStyle = this.light ? '#F8BBD0' : '#F06292';
     ctx.fill();
 
     ctx.rect(this.x+5, this.y, 5, 80)
@@ -103,7 +104,7 @@ class Flamingo{
     ctx.rect(this.movingRight? this.x+22 : this.x-30, this.y, 8, -70)
     ctx.fill();
 
-    ctx.fillStyle = '#F8BBD0';
+    ctx.fillStyle = this.light ? '#F06292' : '#F8BBD0';
     ctx.beginPath();
     ctx.moveTo(this.x, this.y)
     if (this.movingRight)
