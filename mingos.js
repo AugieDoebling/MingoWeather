@@ -108,9 +108,10 @@ class Flamingo{
     ctx.beginPath();
     ctx.moveTo(this.x, this.y)
     if (this.movingRight)
-      ctx.ellipse(this.x, this.y, 25, 17.5, 0, 0, Math.PI*0.75)
-    else
       ctx.ellipse(this.x, this.y, 25, 17.5, 0, Math.PI*0.25, Math.PI)
+    else
+      ctx.ellipse(this.x, this.y, 25, 17.5, 0, 0, Math.PI*0.75)
+      
     ctx.closePath();
     ctx.fill();
 
