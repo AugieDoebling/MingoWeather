@@ -5,7 +5,7 @@ body {
 }
 
 .header {
-   margin: 0 5%;
+   margin: 2em 5% 0;
 }
 
 .header h1 {
@@ -15,6 +15,27 @@ body {
    padding: 15pt 20pt;
    font-weight: 700;
    font-size: 40pt;
+   margin: 0;
+}
+
+.header .rightBar {
+   background-color: white;
+   display: inline-block;
+   float: right;
+   padding: 15pt;
+   margin-top: 28pt;
+}
+
+.header .rightBar a {
+   text-decoration: none;
+   color: #01579B;
+   padding: 10px;
+   font-size: 15pt;
+}
+
+.header .rightBar a:hover {
+   background-color: #F06292; 
+   color: white;
 }
 
 #mingoCanvas {
