@@ -134,5 +134,11 @@ window.onload = () => {
   setInterval(draw, 15);
 }
 
+window.onresize = () => {
+  console.log('resizing')
+  canvas = document.getElementById("mingoCanvas");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
 
 
