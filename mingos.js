@@ -1,7 +1,7 @@
 var mingos = [];
 var canvas;
 
-var maxMingos = 30;
+var maxMingos = 50;
 
 
 function setup() {
