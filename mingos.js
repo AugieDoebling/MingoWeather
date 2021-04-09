@@ -130,10 +130,10 @@ class Flamingo{
   }
 }
 
-window.onload = () => {
-  setup();
-  setInterval(draw, 15);
-}
+// window.onload = () => {
+//   setup();
+//   setInterval(draw, 15);
+// }
 
 window.onresize = () => {
   console.log('resizing')

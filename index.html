@@ -5,16 +5,38 @@
    <link rel='stylesheet' href="mainstyle.css"/>
    <link rel="preconnect" href="https://fonts.gstatic.com"/>
    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet"/>
+   <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="https://kit.fontawesome.com/272cd0934a.js" crossorigin="anonymous"></script>
    
    <script type="text/javascript" src="mingos.js"></script>
+   <script type="text/javascript" src="weather.js"></script>
 </head>
 <body>
    <div class="header">
-      <h1>Augie Doebling</h1>
+      <h1>Mingo Weather</h1>
 
-      <div class='rightBar'>
+      
+
+      <!-- <div class='rightBar'>
          <a href='https://github.com/augiedoebling'>Github</a>
          <a href='https://www.linkedin.com/in/augiedoebling/'>LinkedIn</a>
+      </div> -->
+   </div>
+
+   <div id="loading">
+      loading...
+   </div>
+
+   <div id="mainBox">
+      <h1 id="temp"></h1>
+      <div class="sidebar">
+         <i class="icon fas fa-cloud"></i>
+         <p id='cloudForecast' class='sidebarText'>Partly Cloudy</p>
+
+         <i class="icon fas fa-wind"></i>
+         <p id='windForecast' class='sidebarText'>5 to 10 mph</p>
+
       </div>
    </div>
 

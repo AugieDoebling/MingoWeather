@@ -10,11 +10,13 @@ body {
 
 .header h1 {
    color: white;
-   background-color: #F06292;
+   background-color: black;
+   /*background-color: #F06292;*/
    display: inline-block;
    padding: 15pt 20pt;
    font-weight: 700;
    font-size: 40pt;
+   font-family: 'Kaushan Script;
    margin: 0;
 }
 
@@ -36,6 +38,39 @@ body {
 .header .rightBar a:hover {
    background-color: #F06292; 
    color: white;
+}
+
+#mainBox {
+   display: none;
+   margin: 100px 24.5vw;
+   background-color: rosybrown;
+}
+
+#mainBox #temp {
+   text-align: center;
+   margin: 0;
+   background-color: navajowhite;
+   display: inline-block;
+   font-size: 20vw;
+}
+
+#mainBox .sidebar {
+   background: lightgreen;
+   display: inline-block;
+   vertical-align: top;
+   width: 20vw;
+}
+
+#mainBox .sidebar .icon {
+   font-size: 10vh;
+   text-align: center;
+   width: 100%;
+}
+
+#mainBox .sidebar .sidebarText {
+   margin: 5px 0;
+   width: 100%;
+   text-align: center;
 }
 
 #mingoCanvas {
