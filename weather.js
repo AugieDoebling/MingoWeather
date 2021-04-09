@@ -28,6 +28,12 @@ function setDisplayInfo(currentForecast) {
    let temp = document.getElementById("temp");
    temp.innerHTML = currentForecast.temperature + "&deg;"
 
+   let cloudForecast = document.getElementById("cloudForecast");
+   cloudForecast.innerHTML = currentForecast.shortForecast;
+
+   let windForecast = document.getElementById("windForecast");
+   windForecast.innerHTML = currentForecast.windSpeed;
+
    let loading = document.getElementById("loading");
    loading.style.display = "none";
 

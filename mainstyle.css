@@ -42,35 +42,36 @@ body {
 
 #mainBox {
    display: none;
-   margin: 100px 24.5vw;
-   background-color: rosybrown;
+   margin: 100px 29.5vw;
+   background-color: white;
+   padding: 0 10px;
 }
 
 #mainBox #temp {
-   text-align: center;
    margin: 0;
-   background-color: navajowhite;
    display: inline-block;
-   font-size: 20vw;
+   font-size: 225px;
 }
 
 #mainBox .sidebar {
-   background: lightgreen;
    display: inline-block;
    vertical-align: top;
-   width: 20vw;
+   width: 10vw;
+   margin-top: 25px;
 }
 
 #mainBox .sidebar .icon {
-   font-size: 10vh;
+   font-size: 7vh;
    text-align: center;
    width: 100%;
+   margin-top: 20px;
 }
 
 #mainBox .sidebar .sidebarText {
    margin: 5px 0;
    width: 100%;
    text-align: center;
+   font-size: 14px;
 }
 
 #mingoCanvas {
