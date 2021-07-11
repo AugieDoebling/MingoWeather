@@ -1,10 +1,4 @@
-// 35.280100
-// -120.653500
-
-function getWeather() {
-   let lat = 35.280100;
-   let long = -120.653500;
-
+function getWeather(lat, long) {
    $.get({
       url : `https://api.weather.gov/points/${lat},${long}`,
       success : (data) => {
@@ -60,11 +54,12 @@ function setMingoSpawnner(currentForecast) {
 
       return new Flamingo(x, y);
    }
- 
-   // type = HotFlamingo.
-   // console.log('currentForecast', currentForecast)
-   // mingoSpawnner = (x, y) => new MimosaFlamingo(x, y)
 }
 
-// console.log(mingos)
-getWeather();
+if (navigator.geolocation) {
+   navigator.geolocation.getCurrentPosition((position) => {
+      getWeather(position.coords.latitude, position.coords.longitude)
+   });
+} else {
+   console.log('cant do it')
+}
