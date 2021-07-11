@@ -1,7 +1,9 @@
 body {
-   background-color: #B3E5FC;
+   /*background-color: #B3E5FC;*/
+   background: linear-gradient(193deg, #B3E5FC 0%, #81D4FA 100%);
    font-family: 'Ubuntu', sans-serif;
    margin: 0;
+   height: 97vh;
 }
 
 .header {
@@ -10,13 +12,11 @@ body {
 
 .header h1 {
    color: white;
-   background-color: black;
-   /*background-color: #F06292;*/
    display: inline-block;
    padding: 15pt 20pt;
    font-weight: 700;
-   font-size: 40pt;
-   font-family: 'Kaushan Script;
+   font-size: 25pt;
+   font-family: 'Kaushan Script', 'Ubuntu', sans-serif;
    margin: 0;
 }
 
@@ -40,17 +40,108 @@ body {
    color: white;
 }
 
+#loading {
+ /* Fallback: Set a background color. */
+ /*background-color: #fdf1f0;*/
+
+ /* Create the gradient. */
+ /*background-image: linear-gradient(
+    45deg,
+    #00000000 16.666%, 
+    #E16541 16.666%, 
+    #E16541 33.333%, 
+    #F18F43 33.333%, 
+    #F18F43 50%, 
+    #8B9862 50%, 
+    #8B9862 66.666%, 
+    #476098 66.666%, 
+    #476098 83.333%, 
+    #A7489B 83.333%
+    );*/
+
+   background-image: linear-gradient(
+       45deg,
+       #00000000 16.666%, 
+       #D81B60 16.666%, 
+       #D81B60 33.333%, 
+       #FF9800 33.333%, 
+       #FF9800 50%, 
+       #FFEB3B 50%, 
+       #FFEB3B 66.666%, 
+       #8BC34A 66.666%, 
+       #8BC34A 83.333%, 
+       #009688 83.333%
+    );
+
+ /* Set the background size and repeat properties. */
+ background-size: 100%;
+ background-repeat: repeat;
+
+   height: 100%;
+   width: 100%;
+   position: fixed;
+   left: 0;
+   top: 0;
+   z-index: -1;
+
+}
+
+.loadingOut{
+  animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes rainbow-text-simple-animation {
+  0% {
+   /*opacity: 100%;*/
+    background-size: 100%;
+ }
+ 80% {
+   opacity: 20%;
+    background-size: 1200%;
+ }
+ 100% {
+   opacity: 0%;
+    background-size: 1200%;
+ }
+}
+
+/* Move the background and make it smaller. */
+/* Animation shown when entering the page and after the hover animation. */
+@keyframes rainbow-text-simple-animation-rev {
+  0% {
+    background-size: 1200%;
+ }
+ 40% {
+    background-size: 1200%;
+ }
+ 100% {
+    background-size: 100%;
+ }
+}
+
+#mainBoxContainer {
+   position: absolute;
+   width: 100%;
+   bottom: 14vh;
+   text-align: center;
+   z-index: -2;
+}
+
 #mainBox {
-   display: none;
-   margin: 100px 29.5vw;
-   background-color: white;
+   display: inline-block;
    padding: 0 10px;
+   /*border-bottom: 10px #F06292 solid;*/
+   color: #F06292;
 }
 
 #mainBox #temp {
    margin: 0;
    display: inline-block;
    font-size: 225px;
+   -webkit-text-stroke-width: 6px;
+   -webkit-text-stroke-color: white;
 }
 
 #mainBox .sidebar {
@@ -74,11 +165,19 @@ body {
    font-size: 14px;
 }
 
+#mainBox #bottomBar {
+   background-color: #F06292;
+   height: 6px;
+   width: 104%;
+   margin-left: -2%;
+   border-bottom: 6px white solid;
+}
+
 #mingoCanvas {
    height: 100%;
    width: 100%;
    position: fixed;
    left: 0;
    top: 0;
-   z-index: -1;
+   z-index: -3;
 }

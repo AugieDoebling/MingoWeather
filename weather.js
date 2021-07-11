@@ -18,6 +18,8 @@ function forecast(forecastUrl) {
       url : forecastUrl,
       success : (data) => {
          setDisplayInfo(data.properties.periods[0])
+         setMingoSpawnner(data.properties.periods[0])
+         spawnMingo()
       }
    })
 }
@@ -35,11 +37,21 @@ function setDisplayInfo(currentForecast) {
    windForecast.innerHTML = currentForecast.windSpeed;
 
    let loading = document.getElementById("loading");
-   loading.style.display = "none";
-
-   let mainBox = document.getElementById("mainBox");
-   mainBox.style.display = "inline-block";
+   loading.classList.add('loadingOut')
 }
 
+function setMingoSpawnner(currentForecast) {
+   // class ColdFlamingo extends Flamingo {
+      // class WetFlamingo extends Flamingo {
+         // class HotFlamingo extends Flamingo {
+            // class MimosaFlamingo extends Flamingo {
 
+   
+ 
+   // type = HotFlamingo.
+   // console.log('currentForecast', currentForecast)
+   // mingoSpawnner = (x, y) => new MimosaFlamingo(x, y)
+}
+
+// console.log(mingos)
 getWeather();

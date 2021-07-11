@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Augie Doebling</title>
+   <title>Mingo Weather</title>
    <link rel='stylesheet' href="mainstyle.css"/>
    <link rel="preconnect" href="https://fonts.gstatic.com"/>
    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet"/>
@@ -10,9 +10,11 @@
    <script src="https://kit.fontawesome.com/272cd0934a.js" crossorigin="anonymous"></script>
    
    <script type="text/javascript" src="mingos.js"></script>
+   <script type="text/javascript" src="drawing.js"></script>
    <script type="text/javascript" src="weather.js"></script>
 </head>
 <body>
+   <div id="loading"></div>
    <div class="header">
       <h1>Mingo Weather</h1>
 
@@ -24,19 +26,22 @@
       </div> -->
    </div>
 
-   <div id="loading">
+   <!-- <div id="loading">
       loading...
-   </div>
+   </div> -->
 
-   <div id="mainBox">
-      <h1 id="temp"></h1>
-      <div class="sidebar">
-         <i class="icon fas fa-cloud"></i>
-         <p id='cloudForecast' class='sidebarText'>Partly Cloudy</p>
+   <div id='mainBoxContainer'>
+      <div id="mainBox">
+         <h1 id="temp"></h1>
+         <div class="sidebar">
+            <i class="icon fas fa-cloud"></i>
+            <p id='cloudForecast' class='sidebarText'>Partly Cloudy</p>
 
-         <i class="icon fas fa-wind"></i>
-         <p id='windForecast' class='sidebarText'>5 to 10 mph</p>
+            <i class="icon fas fa-wind"></i>
+            <p id='windForecast' class='sidebarText'>5 to 10 mph</p>
+         </div>
 
+         <div id="bottomBar" />
       </div>
    </div>
 
