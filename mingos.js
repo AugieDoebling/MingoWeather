@@ -5,7 +5,7 @@ class Flamingo{
     this.y = y
     this.movingRight = true;
     this.waitingFrames = 0;
-    this.minMoving = 240;
+    this.minMoving = 480;
   }
     
   flock(ctx) {
@@ -23,10 +23,10 @@ class Flamingo{
     
     //chose what to do
     if (Math.random() < 0.02 && this.minMoving <= 0) {
-      this.waitingFrames = 120;
-      this.minMoving = 120;
+      this.waitingFrames = 240;
+      this.minMoving = 480;
     }
-    else if (Math.random() < 0.01)
+    else if (Math.random() < 0.005)
       this.movingRight = !this.movingRight;
     else
       this.move();
