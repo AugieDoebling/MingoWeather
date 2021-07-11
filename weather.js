@@ -46,7 +46,20 @@ function setMingoSpawnner(currentForecast) {
          // class HotFlamingo extends Flamingo {
             // class MimosaFlamingo extends Flamingo {
 
-   
+   mingoSpawnner = (x, y) => {
+      if (currentForecast.temperature < 50)
+         return new ColdFlamingo(x, y);
+      if (currentForecast.temperature > 80)
+         return new HotFlamingo(x, y);
+      if (currentForecast.shortForecast.toLowerCase().includes('rain'))
+         return new WetFlamingo(x, y);
+
+      var date = new Date(currentForecast.startTime)
+      if ((date.getDay() == 0 || date.getDay() == 6) && date.getHours() < 13)
+         return new MimosaFlamingo(x, y);
+
+      return new Flamingo(x, y);
+   }
  
    // type = HotFlamingo.
    // console.log('currentForecast', currentForecast)
